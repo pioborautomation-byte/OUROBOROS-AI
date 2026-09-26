@@ -1,0 +1,21 @@
+{
+	"name": "agentdock",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Lokalna aplikacja Windows do uruchamiania zadań agentów kodujących jako izolowanych, obserwowalnych runów",
+	"type": "module",
+	"bin": {
+		"agentdock": "./src/main.ts"
+	},
+	"scripts": {
+		"start": "bun run src/main.ts",
+		"dev": "bun run --watch src/main.ts",
+		"test": "bun test",
+		"typecheck": "tsc --noEmit",
+		"build": "bun build --compile --target=bun-windows-x64 ./src/main.ts --outfile agentdock.exe"
+	},
+	"devDependencies": {
+		"@types/bun": "latest",
+		"typescript": "^7.0.2"
+	}
+}

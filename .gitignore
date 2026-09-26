@@ -1,0 +1,25 @@
+# Zależności
+node_modules/
+
+# Artefakt buildu (wynik `agentdock.cmd build` / `bun build --compile`)
+agentdock.exe
+
+# Stan runtime (dane trzymane w %USERPROFILE%\.agentdock; na wypadek lokalnych przebiegów)
+agentdock.db
+*.db
+config.json
+runs/
+worktrees/
+repos/
+
+# Pliki generowane przez agentów w worktree
+.aider*
+.ouroboros*
+.agentdock*
+
+# Logi
+*.log
+
+# Pliki systemu
+Thumbs.db
+.DS_Store
